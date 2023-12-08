@@ -1,0 +1,17 @@
+{% extends "./base.htm" %}
+
+    {% block title %}
+        {{ title|capfirst }} Challenge
+    {% endblock %}
+
+    {% block content %}
+
+        {% include "./includes/header.htm" %}
+
+        <h1>This is {{ months|capfirst }} Challenge:</h1>
+        {% if challenge is not None %}
+            <h2>{{ challenge }}</h2>
+        {% else %}
+            <h2> The challenge is not set yet for {{title}} month. </h2>
+        {% endif %}
+    {% endblock %}

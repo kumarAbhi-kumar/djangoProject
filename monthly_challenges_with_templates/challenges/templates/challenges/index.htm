@@ -1,0 +1,14 @@
+{% extends "./base.htm" %}
+   
+    {% block page_title %}
+        {{ title|capfirst }}
+    {% endblock %} 
+
+    {% block content %}
+        <h1>Welcome to the Django Monthly Challenge Project: </h1>
+        <ul>
+        {% for month in months_list %}
+            <li> <a href="{% url "monthly-challenge" month %}">{{ month|capfirst }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endblock %}
